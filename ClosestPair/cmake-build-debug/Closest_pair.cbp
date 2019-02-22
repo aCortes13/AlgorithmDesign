@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug"/>
+				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug"/>
+				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug"/>
+				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Closest_pair">
-				<Option output="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Closest_pair" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug"/>
+				<Option output="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Closest_pair" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 Closest_pair"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 Closest_pair"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Closest_pair/fast">
-				<Option output="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Closest_pair" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug"/>
+				<Option output="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Closest_pair" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,17 +73,17 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 Closest_pair/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 Closest_pair/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/main.cpp">
+		<Unit filename="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/main.cpp">
 			<Option target="Closest_pair"/>
 		</Unit>
-		<Unit filename="/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/CMakeLists.txt">
+		<Unit filename="/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

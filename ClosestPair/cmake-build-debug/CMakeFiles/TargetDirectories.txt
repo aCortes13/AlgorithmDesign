@@ -1,3 +1,3 @@
-/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/anthonycortes/Documents/Class/AlgorithmDesign/Closest-pair/cmake-build-debug/CMakeFiles/Closest_pair.dir
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/cmake-build-debug/CMakeFiles/Closest_pair.dir
