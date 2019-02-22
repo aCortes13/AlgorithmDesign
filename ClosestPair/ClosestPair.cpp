@@ -41,20 +41,60 @@ class Solution {
       //Base Case => "Brute force"
       return brute_force(Px);
     }
-    
-    
-    /* Your code here */
 
-    
-    return /* best of left, right, split */;
+
+    auto xMid = Px.begin() + (Px.size()/2);
+    auto yMid = Py.begin() + (Py.size()/2);
+
+    // split Px && Py into left and right halves
+    std::vector<Point> Lx (Px.begin(), xMid);
+    std::vector<Point> Ly (Py.begin(), yMid);
+    std::vector<Point> Rx (xMid, Px.end());
+    std::vector<Point> Ry (yMid, Py.end());
+
+    //recursively compute closest pair on each side
+    std::pair<Point, Point> closeL = closest_pair(Lx, Ly);
+    std::pair<Point, Point> closeR = closest_pair(Rx, Ry);
+
+    // get the minimum distance from the two closest points
+    auto lDistance = distance(closeL.first, closeL.second);
+    auto rDistance = distance(closeR.first, closeR.second);
+    double delta = std::min(lDistance, rDistance);
+
+    // find the closest split pair
+    std::pair<Point, Point> closeSp = closest_split_pair(Px, Py, delta);
+    auto spDistance = distance(closeSp.first, closeSp.second);
+
+    if (spDistance < delta) {
+      return closeSp;
+    } else {
+      return lDistance < rDistance ? closeL : closeR;
+    }
+
   }
 
   std::pair<Point, Point> closest_split_pair (std::vector<Point>& Px, std::vector<Point>& Py, double delta) {
     
-    
-    /* Your code here */
+    // get largest x coord in left half
+    auto xBar = Px.begin() + (Px.size()/2);
 
-    return best_pair;
+    // get coors +- xBar
+    std::vector<Point> Sy (xBar - delta, xBar + delta);
+
+    double best = delta;
+    std::pair<Point, Point> bestPair = std::make_pair(Px[0], Px[1]);
+
+    int l = Sy.size();
+    for (int i = 0; l - 1; ++i) {
+      for (int j = i + 1; j < l; ++j) {
+        auto currentDist = distance(Sy[i], Sy[j]);
+        if (currentDist < best) {
+          best = currentDist;
+          bestPair = std::make_pair(Sy[i], Sy[j]);
+        }
+      }
+    }
+    return bestPair;
   }
 
 
