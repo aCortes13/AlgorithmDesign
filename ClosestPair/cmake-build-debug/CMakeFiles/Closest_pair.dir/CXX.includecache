@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/ClosestPair.cpp
+utility
+-
+float.h
+-
+random
+-
+ctime
+-
+sstream
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/main.cpp
+iostream
+-
+stdio.h
+-
+vector
+-
+algorithm
+-
+math.h
+-
+utility
+-
+float.h
+-
+random
+-
+ctime
+-
+ClosestPair.cpp
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/ClosestPair/ClosestPair.cpp
+

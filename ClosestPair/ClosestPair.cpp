@@ -13,16 +13,12 @@ struct Point {
 
 
 struct by_xval {
-  
- // .........  implement functor  ............... returns bool defines sort comparison
-
+  bool operator() (Point &first, Point &second) { return (first.x < second.x);  }
 };
 
 
 struct by_yval {
-
-  // .........  implement functor  ............... returns bool defines sort comparison
-  
+  bool operator() (Point &first, Point &second) { return (first.y < second.y);  }
 };
 
 
