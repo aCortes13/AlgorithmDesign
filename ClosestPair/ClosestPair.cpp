@@ -76,17 +76,28 @@ class Solution {
   std::pair<Point, Point> closest_split_pair (std::vector<Point>& Px, std::vector<Point>& Py, double delta) {
     
     // get largest x coord in left half
-    auto xBar = Px.begin() + (Px.size()/2);
+    auto pxSize = Px.size();
+    auto xBar = Px[(Px.size() - 1) / 2];
 
-    // get coors +- xBar
-    std::vector<Point> Sy (xBar - delta, xBar + delta);
+    // determine min and max values
+    auto min = xBar.x - delta;
+    auto max = xBar.x + delta;
+
+    // get point whos x-coordinate is xBar +- delta
+    std::vector<Point> Sy;
+    for (int i = 0; i < pxSize; ++i) {
+      auto xCoord = Px[i].x;
+      if ((min < xCoord) && (max > xCoord)) {
+        Sy.push_back(Px[i]);
+      }
+    }
 
     double best = delta;
     std::pair<Point, Point> bestPair = std::make_pair(Px[0], Px[1]);
 
     int l = Sy.size();
-    for (int i = 0; l - 1; ++i) {
-      for (int j = i + 1; j < l; ++j) {
+    for (int i = 0; i < (l - 1); ++i) {
+      for (int j = i + 1; j < std::min(7, l-1); ++j) {
         auto currentDist = distance(Sy[i], Sy[j]);
         if (currentDist < best) {
           best = currentDist;
