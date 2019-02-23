@@ -1,9 +1,9 @@
-// New comment
 #include <utility>
 #include <algorithm>
 #include <float.h>
 #include <random>
 #include <ctime>
+#include <time.h>
 #include <sstream>
 
 struct Point {
@@ -82,7 +82,7 @@ class Solution {
     
     // get largest x coord in left half
     auto pxSize = Px.size();
-    auto xBar = Px[(Px.size() - 1) / 2].x;
+    auto xBar = Px[(pxSize - 1) / 2].x;
 
     // determine min and max values
     auto min = xBar - delta;
@@ -150,6 +150,7 @@ class Solution {
   void fill_Point_vect (std::vector<Point>& pv) {
     ///DO NOT MODIFY
     ///This function is used by unit tests
+    // srand(time(NULL)); -- uncomment this line for a consistently random selection of numbers
     for (auto& p: pv) {
       double x = (rand() - rand()) % 100,
           y = (rand() - rand()) % 100;

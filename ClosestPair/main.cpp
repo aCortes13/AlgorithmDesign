@@ -16,16 +16,17 @@ int main () {
     double x = 0;
     double y = 0;
 
-    std::vector<Point> P;
+    std::vector<Point> P (10000, Point(0, 0));
 
-    while(scanf("%lf %lf",&x,&y)== 2){
-        Point p(x,y);
-        P.push_back(p);
-
-    }
+//    while(scanf("%lf %lf",&x,&y)== 2){
+//        Point p(x,y);
+//        P.push_back(p);
+//
+//    }
 
     Solution solution; // instantiate Solution class to create a Solution object
 
+    solution.fill_Point_vect(P);
     auto brute_pair = solution.brute_force(P);
     auto brute_distance = distance(brute_pair.first, brute_pair.second);
 
