@@ -99,6 +99,7 @@ class Solution {
         Sy.push_back(Px[i]);
       }
     }
+    std::sort(Sy.begin(), Sy.end(), by_yval());
 
     double best = delta;
     std::pair<Point, Point> bestPair = std::make_pair(Px[0], Px[1]);
