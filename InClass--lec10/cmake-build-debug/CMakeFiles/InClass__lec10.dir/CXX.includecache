@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/InClass--lec10/main.cpp
+iostream
+-
+PrintEvens.cpp
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/InClass--lec10/PrintEvens.cpp
+

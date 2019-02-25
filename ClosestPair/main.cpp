@@ -16,7 +16,7 @@ int main () {
     double x = 0;
     double y = 0;
 
-    std::vector<Point> P (10000, Point(0, 0));
+    std::vector<Point> P;// (10000, Point(0, 0));
 
 //    while(scanf("%lf %lf",&x,&y)== 2){
 //        Point p(x,y);

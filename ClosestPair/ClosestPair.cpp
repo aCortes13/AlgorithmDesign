@@ -44,14 +44,18 @@ class Solution {
     }
 
 
-    auto xMid = Px.begin() + (Px.size()/2);
-    auto yMid = Py.begin() + (Py.size()/2);
+    auto m = n >> 1;
 
-    // split Px && Py into left and right halves
-    std::vector<Point> Lx (Px.begin(), xMid);
-    std::vector<Point> Ly (Py.begin(), yMid);
-    std::vector<Point> Rx (xMid, Px.end());
-    std::vector<Point> Ry (yMid, Py.end());
+    // split Px into left and right halves
+    std::vector<Point> Lx (Px.begin(), Px.begin() + m);
+    std::vector<Point> Ly (Px.begin(), Px.begin() + m);
+    std::vector<Point> Rx (Px.begin() + m, Px.end());
+    std::vector<Point> Ry (Px.begin() + m, Px.end());
+
+    // sort one set by y
+    std::sort(Ly.begin(), Ly.end(), by_yval());
+    std::sort(Ry.begin(), Ry.end(), by_yval());
+
 
     //recursively compute closest pair on each side
     std::pair<Point, Point> closeL = closest_pair(Lx, Ly);
@@ -81,8 +85,8 @@ class Solution {
   std::pair<Point, Point> closest_split_pair (std::vector<Point>& Px, std::vector<Point>& Py, double delta) {
     
     // get largest x coord in left half
-    auto pxSize = Px.size();
-    auto xBar = Px[(pxSize - 1) / 2].x;
+    auto n = Px.size();
+    auto xBar = Px[(n - 1) / 2].x;
 
     // determine min and max values
     auto min = xBar - delta;
@@ -90,7 +94,7 @@ class Solution {
 
     // get point whos x-coordinate is xBar +- delta
     std::vector<Point> Sy;
-    for (int i = 0; i < pxSize; ++i) {
+    for (int i = 0; i < n; ++i) {
       auto xCoord = Px[i].x;
       if ((min < xCoord) && (max > xCoord)) {
         Sy.push_back(Px[i]);
