@@ -43,7 +43,6 @@ class Solution {
       return brute_force(Px);
     }
 
-
     auto m = n >> 1;
 
     // split Px into left and right halves
@@ -154,7 +153,7 @@ class Solution {
   void fill_Point_vect (std::vector<Point>& pv) {
     ///DO NOT MODIFY
     ///This function is used by unit tests
-    // srand(time(NULL)); -- uncomment this line for a consistently random selection of numbers
+    srand(time(NULL)); //-- uncomment this line for a consistently random selection of numbers
     for (auto& p: pv) {
       double x = (rand() - rand()) % 100,
           y = (rand() - rand()) % 100;
