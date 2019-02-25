@@ -4,7 +4,7 @@
 int main()
 {
 
-  BST myTree ;
+  BST myTree;
 
 
   /* Let us create following BST

@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/InClass--lec10/PrintEvens.cpp
+iostream
+-
+
 /Users/anthonycortes/Documents/Class/AlgorithmDesign/InClass--lec10/main.cpp
 iostream
 -

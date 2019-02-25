@@ -51,16 +51,30 @@ BST::BST()
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
-void BST::insert(Node *treeNode, int key)
-{
-  if (!treeNode)
-  {
+void BST::insert(Node *treeNode, int key) {
+  if (!treeNode) {
     treeNode = new Node(key);
     root = treeNode;
+  } else {
+    Node *curr = treeNode;
+    while (curr) {
+      if (key <= curr->key) {
+        if (!(curr->left)) {
+          curr->left = treeNode;
+          curr = nullptr;
+        } else {
+          curr = curr->left;
+        }
+      } else {
+        if (!(curr->right)) {
+          curr->right = treeNode;
+          curr = nullptr;
+        } else {
+          curr = curr->right;
+        }
+      }
+    }
   }
-  else
-  {
-    //-------------------------- code here  -----------------------------
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -164,4 +178,3 @@ void BST::postOrder(Node * treeNode)
 void BST::printEvenNode(Node * treeNode) {
 //-------------------------- code here  -----------------------------
   }
-}
