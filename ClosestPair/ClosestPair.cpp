@@ -55,7 +55,6 @@ class Solution {
     std::sort(Ly.begin(), Ly.end(), by_yval());
     std::sort(Ry.begin(), Ry.end(), by_yval());
 
-
     //recursively compute closest pair on each side
     std::pair<Point, Point> closeL = closest_pair(Lx, Ly);
     std::pair<Point, Point> closeR = closest_pair(Rx, Ry);
@@ -100,12 +99,21 @@ class Solution {
         Sy.push_back(Px[i]);
       }
     }
-    std::sort(Sy.begin(), Sy.end(), by_yval());
 
     double best = delta;
     std::pair<Point, Point> bestPair = std::make_pair(Px[0], Px[1]);
 
     int l = Sy.size();
+
+    // corner cases
+    if (l < 2) {
+      return bestPair;
+    }
+    if (l == 2) {
+      return std::make_pair(Sy[0], Sy[1]);
+    }
+
+    // bruce force to find best distance in Sy
     for (int i = 0; i < (l - 1); ++i) {
       for (int j = i + 1; j < std::min(7, l); ++j) {
         auto currentDist = distance(Sy[i], Sy[j]);
