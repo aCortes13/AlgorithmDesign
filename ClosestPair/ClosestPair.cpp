@@ -74,6 +74,7 @@ class Solution {
     if (spDistance < delta){
       // split distance is better than either half
       return closeSp;
+
     } else {
       // determine which half has the closer pair
       return lDistance < rDistance ? closeL : closeR;
@@ -95,7 +96,7 @@ class Solution {
     std::vector<Point> Sy;
     for (int i = 0; i < n; ++i) {
       auto xCoord = Px[i].x;
-      if ((min < xCoord) && (max > xCoord)) {
+      if ((min <= xCoord) && (max >= xCoord)) {
         Sy.push_back(Px[i]);
       }
     }
@@ -154,10 +155,10 @@ class Solution {
   void fill_Point_vect (std::vector<Point>& pv) {
     ///DO NOT MODIFY
     ///This function is used by unit tests
-    srand(time(NULL)); //-- uncomment this line for a consistently random selection of numbers
+    //srand(time(NULL)); //-- uncomment this line for a consistently random selection of numbers
     for (auto& p: pv) {
       double x = (rand() - rand()) % 100,
-          y = (rand() - rand()) % 100;
+      y = (rand() - rand()) % 100;
       x += (double)((rand() - rand()) % 100) / 100;
       y += (double)((rand() - rand()) % 100) / 100;
       p = Point(x, y);
