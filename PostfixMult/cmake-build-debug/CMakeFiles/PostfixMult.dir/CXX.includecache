@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/PostfixMult/PostFix.cpp
+iostream
+-
+stack
+-
+string
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/PostfixMult/main.cpp
+iostream
+-
+stack
+-
+string
+-
+PostFix.cpp
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/PostfixMult/PostFix.cpp
+

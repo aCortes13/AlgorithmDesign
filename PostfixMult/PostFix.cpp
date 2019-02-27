@@ -23,12 +23,52 @@ class PostFix{
 
  public:
 
-  int evaluatePostFix(std::string expr){
+  int evaluatePostFix(std::string expr) {
 
     std::stack<int> S;
+    for (int i = 0; i < expr.length();i++) {
+      if (expr[i] == ' ') { continue; }
 
-   ///your code here////
-     
-    return S.top();
+      if(isdigit(expr[i])) {
+        int val = 0;
+
+        while (i < expr.length() && isdigit(expr[i])) {
+          val = (val*10) + (expr[i]-'0');
+          i++;
+        }
+
+        S.push(val);
+      }
+      else {
+        char c = expr[i];
+        int left = S.top();
+        S.pop();
+        int right = S.top();
+        S.pop();
+
+        switch (c) {
+          case '*':
+            S.push(left * right);
+            break;
+
+          case '/':
+            S.push(left / right);
+            break;
+
+          case '+':
+            S.push(left + right);
+            break;
+
+          case '-':
+            S.push(right-left);
+            break;
+
+          default:
+            break;
+        }
+      }
     }
+
+    return S.top();
+  }
 };
