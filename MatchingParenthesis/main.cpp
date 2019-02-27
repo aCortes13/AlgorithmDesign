@@ -1,39 +1,19 @@
 #include <iostream>
-#include <stdio.h>
-#include <vector>
-#include <algorithm>
-#include <math.h>
-#include <utility>
-#include <float.h>
-#include <random>
-#include <ctime>
-#include "ClosestPair.cpp"
+#include <stack>
+#include <string>
+#include "VerifyParens.cpp"
 
-int main () {
+  int main(){
+  {
+    std::string expr = "{()}[]";
 
-    freopen("../testfile.txt","r",stdin);
+    VerifyParens myVerify;
 
-    double x = 0;
-    double y = 0;
-
-    std::vector<Point> P;
-
-    while(scanf("%lf %lf",&x,&y)== 2){
-        Point p(x,y);
-        P.push_back(p);
-
-    }
-
-    Solution solution; // instantiate Solution class to create a Solution object
-
-    auto brute_pair = solution.brute_force(P);
-    auto brute_distance = distance(brute_pair.first, brute_pair.second);
-
-    auto non_brute = solution.find_closest_pair(P);
-    auto non_brute_distance = distance(non_brute.first, non_brute.second);
-
-    std::cout << "Brute Force Distance: " << brute_distance << std::endl
-              << "Non-Brute Force Distance: " << non_brute_distance << std::endl;
-
-   return 0;
-}
+    if (myVerify.areParanthesisBalanced(expr))
+      std::cout << "Balanced";
+    else
+      std::cout << "Not Balanced";
+    return 0;
+  }
+  return 0;
+} 
