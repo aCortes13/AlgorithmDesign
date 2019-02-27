@@ -3,17 +3,15 @@
 #include <string>
 #include "VerifyParens.cpp"
 
-  int main(){
+int main()
   {
-    std::string expr = "{()}[]";
+  std::string expr = "{()}[]";
 
-    VerifyParens myVerify;
+  VerifyParens myVerify;
 
-    if (myVerify.areParanthesisBalanced(expr))
-      std::cout << "Balanced";
-    else
-      std::cout << "Not Balanced";
-    return 0;
-  }
+  if (myVerify.areParanthesisBalanced(expr))
+    std::cout << "Balanced";
+  else
+    std::cout << "Not Balanced";
   return 0;
-} 
+}

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MatchingParenthesis/VerifyParens.cpp
+iostream
+-
+cmath
+-
+cstdio
+-
+stack
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MatchingParenthesis/main.cpp
+iostream
+-
+stack
+-
+string
+-
+VerifyParens.cpp
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MatchingParenthesis/VerifyParens.cpp
+

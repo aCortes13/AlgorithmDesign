@@ -7,18 +7,42 @@
 #include<cstdio>
 #include <stack>
 
-class VerifyParens{
+class VerifyParens {
 
- public:
+public:
 
 
-    bool areParanthesisBalanced(std::string expr) {
+  bool areParanthesisBalanced(std::string expr) {
 
-      std::stack<char> s;
-      char x;
+    std::stack<char> s;
+    char x;
 
-      //................ your code here ............
-      // Make sure to read the directions! ..........
-      
+    for (char c : expr) {
+      switch(c) {
+        case '(':
+            s.push(')');
+            break;
 
+        case '{':
+            s.push('}');
+            break;
+
+        case '[':
+            s.push(']');
+            break;
+
+        default:
+            if (c == ')' || c == '}' || c == ']') {
+              x=s.top();
+              if (x != c) {
+                return false;
+              } else {
+                s.pop();
+              }
+            }
+      }
+
+    }
+    return s.empty();
+  }
 };
