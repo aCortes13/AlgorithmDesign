@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MiddleElementStack/deleteMid.cpp
+iostream
+-
+cmath
+-
+cstdio
+-
+stack
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MiddleElementStack/main.cpp
+iostream
+-
+stack
+-
+deleteMid.cpp
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MiddleElementStack/deleteMid.cpp
+

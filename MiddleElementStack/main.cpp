@@ -31,6 +31,4 @@ int main()
     std::cout << p << " ";
   }
   return 0;
-} 
-  return 0;
-} 
+}
