@@ -1,6 +1,13 @@
+//
+// Created by Greg LaKomski on 2/28/19.
+//
+
+#ifndef BINARYSORTTREE_BST_H
+#define BINARYSORTTREE_BST_H
+
 #include<iostream>
-
-
+#include<string>
+#include<limits.h>
 
 
 // create Tree
@@ -10,11 +17,32 @@ struct Node {
   struct Node *left, *right;
 };
 
+struct Trunk
+{
+  Trunk * prev;
+  std::string str;
+
+  Trunk(Trunk * prev, std::string str)
+  {
+    this->prev = prev;
+    this->str = str;
+  }
+};
+
+
+
+
 class BST {
 
  private:
 
   Node *root;
+  Trunk *prev;
+
+
+
+  bool isLeft;
+
   void insert(Node *treeNode, int key);
   bool isBalanced(Node *treeNode);
   int  getHeight(Node *treeNode);
@@ -24,6 +52,15 @@ class BST {
   void postOrder(Node * treeNode);
   void printEvenNode(Node * treenode);
   bool isComplete(Node* root, int i, int n);
+  void showTrunks(Trunk *p);
+  void printTree(Node *root, Trunk *prev, bool isLeft);
+  bool isBST(Node * treeNode, int min, int max);
+  bool findPair(Node* X, Node* Y, int pair_sum, Node* x, Node* y);
+  Node * getMaxNode(Node * root);
+  Node * getMinNode(Node * root);
+
+
+
 
  public:
   BST();  // constructor
@@ -32,8 +69,8 @@ class BST {
   void insert(int data){ insert(root, data);}
 
   int getHeight(){return getHeight(root);}
-  Node * getMaxNode();
-  Node * getMinNode();
+  Node * getMaxNode(){return getMaxNode(root);}
+  Node * getMinNode(){return getMinNode(root);}
 
   void deleteBST() {deleteBST(root);}
 
@@ -43,17 +80,36 @@ class BST {
   void preOrder(){preOrder(root);}
   void postOrder(){postOrder(root);}
   void printEvenNode() {printEvenNode(root);}
-  bool isComplete(int n) {std::cout << std::endl;
-    return isComplete(root, 0, n);}
+  bool isComplete(int n) {
+    std::cout << std::endl;
+    return isComplete(root, 0, n);
+  }
+  void printTree() {printTree(root, prev, isLeft);}
+  bool isBST(){
+    return(isBST(root, INT_MIN, INT_MAX));
+  }
+
+  bool findPair(int pair_sum){
+    Node* x = getMinNode(root);
+    Node* y = getMaxNode(root);
+    return findPair( root, root, pair_sum,  x, y);
+  }
+
+  void setRoot(Node * aroot){
+
+    root = aroot;
+  }
 };
 
-/////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
 BST::BST()
 {
-  root = NULL;
+  root = nullptr;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////
 void BST::insert(Node *treeNode, int key)
 {
   if (!treeNode)
@@ -108,10 +164,10 @@ bool BST::isBalanced(Node *treeNode)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
-Node * BST::getMaxNode() {
+Node * BST::getMaxNode(Node * root) {
   if (!root)
   {
-    std::cout <<  " the BST is empty!" << std::endl;
+   // std::cout <<  " the BST is empty!" << std::endl;
     return nullptr;
   }
   Node * treeNode = root;
@@ -121,10 +177,10 @@ Node * BST::getMaxNode() {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
-Node * BST::getMinNode() {
+Node * BST::getMinNode(Node* root) {
   if (!root)
   {
-    std::cout <<  " the BST is empty!" << std::endl;
+   // std::cout <<  " the BST is empty!" << std::endl;
   }
   Node * treeNode = root;
   while(treeNode->left)
@@ -199,10 +255,101 @@ void BST::printEvenNode(Node * treeNode) {
 //////////////////////////////////////////////////////////////////////////////////////////
 
 bool BST::isComplete(Node* root, int i, int n) {
-  if (i = n) {
-    return
-  }
 
+  // return if tree is empty
+  if(root == nullptr)
+    return true;
+
+  if ((root->left && 2*i + 1 >= n) || !isComplete(root->left, 2*i + 1, n))
+    return false;
+
+  if ((root->right && 2*i + 2 >= n) || !isComplete(root->right,2* i + 2, n))
+    return false;
 
   return true;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// Helper function to print branches of the binary tree
+void BST::showTrunks(Trunk *p)
+{
+  if (p == nullptr)
+    return;
+
+  showTrunks(p->prev);
+
+  std::cout << p->str;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// Recursive function to print binary tree
+// It uses inorder traversal
+void BST::printTree(Node *root, Trunk *prev, bool isLeft)
+{
+  if (root == nullptr)
+    return;
+
+  std::string prev_str = "	";
+  Trunk *trunk = new Trunk(prev, prev_str);
+
+  printTree(root->left, trunk, true);
+
+  if (!prev)
+    trunk->str = "---";
+  else if (isLeft)
+  {
+    trunk->str = ".---";
+    prev_str = "	|";
+  }
+  else
+  {
+    trunk->str = "`---";
+    prev->str = prev_str;
+  }
+
+  showTrunks(trunk);
+  std::cout << root->key << std::endl;
+
+  if (prev)
+    prev->str = prev_str;
+  trunk->str = "	|";
+
+  printTree(root->right, trunk, false);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+bool BST::isBST(Node* node, int minKey, int maxKey){
+
+
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function to find a pair with given sum in given BST
+bool BST::findPair(Node* X, Node* Y, int pair_sum, Node* x, Node* y)
+{
+  if (X == nullptr || Y == nullptr)
+    return false;
+
+  // if current sum is less than the required sum, update x
+  //-----------------  CODE  --------------------
+
+    // if current sum is equal to the required sum, 
+    // print the pair and return true
+//-----------------  CODE  --------------------
+
+    // if current sum is more than the required sum, update y
+//-----------------  CODE  --------------------
+
+    // if current sum is equal to the required sum, 
+    // print the pair and return true
+//-----------------  CODE  --------------------
+  
+}
+
+
+#endif //BINARYSORTTREE_BST_H

@@ -1,7 +1,3 @@
-//
-// Created by Greg LaKomski on 2/28/19.
-//
-
 #ifndef BINARYSORTTREE_BST_H
 #define BINARYSORTTREE_BST_H
 
@@ -59,7 +55,7 @@ class BST {
 
  public:
   BST();  // constructor
-  ~BST();     // destractor
+  ~BST(); // destructor
 
   void insert(int data){ insert(root, data);}
 
@@ -309,10 +305,12 @@ void BST::printTree(Node *root, Trunk *prev, bool isLeft)
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-bool BST::isBST(Node* node, int minKey, int maxKey){
+bool BST::isBST(Node* node, int minKey, int maxKey) {
+  if (node == nullptr) return true;
 
---------------------- RECURSIVE CODE HERE ----------------------------------
+  if (minKey > node->key || maxKey < node->key) return false;
 
+  return(isBST(node->left, minKey, node->key) && isBST(node->right, node->key, maxKey));
 }
 
 #endif //BINARYSORTTREE_BST_H

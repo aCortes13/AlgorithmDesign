@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/isThisBST/BST.h
+iostream
+-
+string
+-
+limits.h
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/isThisBST/main.cpp
+iostream
+-
+BST.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/isThisBST/BST.h
+
