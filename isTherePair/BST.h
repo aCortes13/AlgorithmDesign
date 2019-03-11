@@ -322,15 +322,18 @@ void BST::printTree(Node *root, Trunk *prev, bool isLeft)
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 bool BST::isBST(Node* node, int minKey, int maxKey){
+  if (node == nullptr) return true;
 
+  if (minKey > node->key || maxKey < node->key) return false;
 
-
+  return(isBST(node->left, minKey, node->key) && isBST(node->right, node->key, maxKey));
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 // Function to find a pair with given sum in given BST
-bool BST::findPair(Node* X, Node* Y, int pair_sum, Node* x, Node* y)
+// return findPair( root, root, pair_sum,  x, y);
+bool BST::findPair(Node* X, Node* Y, int pair_sum, Node* minNode, Node* maxNode)
 {
   if (X == nullptr || Y == nullptr)
     return false;
