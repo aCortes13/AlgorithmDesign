@@ -22,15 +22,13 @@ public:
 
     // Constructor - create new graph and initialize visited to 0
     Solution (const std::vector<Edge>& edge_set, int n) {
-       
-       ------------------ code --------------------
+      myGraph = new Graph(edge_set, n);
+      visited = std::vector<bool>(n, 0);
     }
 
     // uses BFS to determine whether connected
     bool isConnected (const int src, const int dest) {
-       
-       ---------------------- code ----------------------
-        return retval;
+      return BFS(src, dest);
     }
 
 private:
@@ -42,8 +40,9 @@ private:
   
   // BFS  - if connected returns true - else false
   bool BFS (const int src, const int dest) {
-     
-     --------------- code ----------------------
-     
+    std::queue<int> queue;
+    while (!queue.empty()) {
+
+    }
   }     
 };

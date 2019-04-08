@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/PathBetweenVerticies/Paths.cpp
+iostream
+-
+vector
+-
+list
+-
+queue
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/PathBetweenVerticies/main.cpp
+iostream
+-
+vector
+-
+Paths.cpp
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/PathBetweenVerticies/Paths.cpp
+
