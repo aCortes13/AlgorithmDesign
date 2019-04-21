@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/DFSAlpha/depthFirstSearch.h
+iostream
+-
+stack
+-
+vector
+-
+queue
+-
+utility
+-
+algorithm
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/DFSAlpha/main.cpp
+iostream
+-
+stack
+-
+vector
+-
+queue
+-
+utility
+-
+depthFirstSearch.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/DFSAlpha/depthFirstSearch.h
+

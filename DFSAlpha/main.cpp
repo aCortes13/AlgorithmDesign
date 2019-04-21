@@ -14,7 +14,7 @@
 int main()
 {
   // vector of graph edges as per above diagram
-  vector<Edge> edges = {
+  std::vector<Edge> edges = {
 
       {0,1,2}, {0,3,15}, {0,8,9}, {1,2,3}, {1,3,5}, {1,4,17},
       {2,5,18}, {2,4,12}, {3,6,6}, {3,4,4}, {4,5,13},{4,6,11},
