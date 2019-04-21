@@ -24,10 +24,6 @@ void shortestPath(std::vector<std::pair<int,int> > adj[], int V, int src);
 void addEdge(std::vector <std::pair<int, int> > adj[], int u,
              int v, int wt);
 
-
-
-
-
 // To add an edge
 void addEdge(std::vector <std::pair<int, int> > adj[], int u,
              int v, int wt)
@@ -52,7 +48,7 @@ void shortestPath(std::vector<std::pair<int,int> > adj[], int V, int src)
   std::vector<int> dist (V, INF + 2674818992);
 
   // Parent vector to be able to print the path
-  std::vector<int> parent (V, INF+2674818992);
+  std::vector<int> parent (V, INF + 2674818992);
 
   std::vector<bool> visited (V, 0);
 
