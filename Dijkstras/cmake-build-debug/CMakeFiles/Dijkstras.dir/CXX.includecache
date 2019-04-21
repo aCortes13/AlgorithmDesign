@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/Dijkstras/Dijkstra.h
+iostream
+-
+cmath
+-
+cstdio
+-
+utility
+-
+vector
+-
+queue
+-
+stack
+-
+cstdint
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/Dijkstras/main.cpp
+iostream
+-
+vector
+-
+utility
+-
+Dijkstra.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/Dijkstras/Dijkstra.h
+

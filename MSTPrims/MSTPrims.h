@@ -108,8 +108,8 @@ std::vector<std::list<std::pair<int,int>>> MSTPrims::createAdjList(int V){
 // add edge to the adjacency list
 void MSTPrims::addEdge(int u, int v, int w)
 {
-
---------------------  code  ----------------------
+  adj[u].push_back(std::make_pair(v, w));
+  adj[v].push_back(std::make_pair(u, w));
 }
 
 // Prints shortest paths from src to all other vertices
@@ -126,7 +126,7 @@ void MSTPrims::primMST()
 
   // Create a vector for weights and initialize all
   // weights as infinite (INF)
-  std::vector<int> weight(V, INF);
+  std::vector<int> key(V, INF);
 
   // To store parent array which in turn store MST - vector int init to -1
   std::vector<int> parent(V, -1);
@@ -137,20 +137,40 @@ void MSTPrims::primMST()
   // Insert source itself in priority queue and initialize
   // its weight as 0.
   pq.push(std::make_pair(0, src));
-  weight[src] = 0;
+  key[src] = 0;
 
   /* Looping till priority queue becomes empty */
   while (!pq.empty())
   {
-    // The first vertex in pair is the minimum weight
+    // The first vertex in pair is the minimum key
     // vertex, extract it from priority queue.
     // vertex label is stored in second of pair (it
     // has to be done this way to keep the vertices
-    // sorted weight (weight must be first item
+    // sorted key (key must be first item
     // in pair)
+    int u = pq.top().second;
+    pq.pop();
 
+    inMST[u] = true; // Include vertex in MST
 
-    ------------------------ code --------------------
+    // Traverse all adjacent of u
+    for (auto x : adj[u])
+    {
+      // Get vertex label and weight of current adjacent
+      // of u.
+      int v = x.first;
+      int weight = x.second;
+
+      // If v is not in MST and weight of (u,v) is smaller
+      // than current key of v
+      if (inMST[v] == false && key[v] > weight)
+      {
+        // Updating key of v
+        key[v] = weight;
+        pq.push(std::make_pair(key[v], v));
+        parent[v] = u;
+      }
+    }
 
   }
 

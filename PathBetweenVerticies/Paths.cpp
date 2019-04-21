@@ -37,12 +37,29 @@ private:
   std::vector<bool> visited;
 
   std::vector<int> path;
-  
   // BFS  - if connected returns true - else false
   bool BFS (const int src, const int dest) {
-    std::queue<int> queue;
-    while (!queue.empty()) {
+    int popped;
 
+    visited[src] = true;
+    path.push_back(src);
+
+    while (!path.empty()) {
+      popped = path.front();
+      path.erase(path.begin());
+
+      if (popped == dest)
+        return true;
+
+      for (auto i : myGraph->adj_list[popped]) {
+        if (!visited[i])
+          path.push_back(i);
+          visited[i] = true;
+
+        if (visited[dest])
+          return true;
+      }
     }
-  }     
+    return false;
+  }
 };

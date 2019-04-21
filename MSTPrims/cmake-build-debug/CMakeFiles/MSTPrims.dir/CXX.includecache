@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MSTPrims/MSTPrims.h
+cstdio
+-
+iostream
+-
+utility
+-
+vector
+-
+list
+-
+queue
+-
+algorithm
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MSTPrims/main.cpp
+cstdio
+-
+iostream
+-
+utility
+-
+vector
+-
+list
+-
+queue
+-
+MSTPrims.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MSTPrims/MSTPrims.h
+
