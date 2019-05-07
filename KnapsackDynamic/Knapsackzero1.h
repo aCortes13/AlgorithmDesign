@@ -23,7 +23,15 @@ int knapSack(int W, std::vector<int> wt, std::vector<int> val, std::vector<std::
   // Build table B[][] in bottom up manner
   for (i = 0; i <= num; i++)
   {
-    ----code ------
+    for (maxW = 0; maxW <= W; maxW++)
+    {
+      if (i==0 || maxW==0)
+        B[i][maxW] = 0;
+      else if (wt[i - 1] <= maxW)
+        B[i][maxW] = std::max(val[i-1] + B[i-1][maxW-wt[i-1]],  B[i-1][maxW]);
+      else
+        B[i][maxW] = B[i-1][maxW];
+    }
   }
 
   return B[num][W];
@@ -35,8 +43,17 @@ void printsack(std::vector<std::vector<int>> & B, std::vector<int> wt, int num, 
   int k = W;
 
   std::cout<<std::endl;
-  
------ code --------
+
+  while (i > 0 && k > 0) {
+    if (B[i][k] != B[i-1][k]) {
+      printf("%d ", i);
+      i--;
+      k = wt[i];
+    }
+    else {
+      i--;
+    }
+  }
 }
 
 #endif //KNAPSACK1_KNAPSACKZERO1_H

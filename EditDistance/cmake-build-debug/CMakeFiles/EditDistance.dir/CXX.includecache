@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/EditDistance/EditDistanceDynamic.h
+iostream
+-
+vector
+-
+algorithm
+-
+string
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/EditDistance/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+string
+-
+EditDistanceDynamic.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/EditDistance/EditDistanceDynamic.h
+

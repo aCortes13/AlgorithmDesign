@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/KnapsackDynamic/Knapsackzero1.h
+iostream
+-
+vector
+-
+algorithm
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/KnapsackDynamic/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+Knapsackzero1.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/KnapsackDynamic/Knapsackzero1.h
+

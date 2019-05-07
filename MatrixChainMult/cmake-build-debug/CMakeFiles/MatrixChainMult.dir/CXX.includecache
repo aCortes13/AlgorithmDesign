@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MatrixChainMult/MatrixChain.h
+stdio.h
+-
+limits.h
+-
+vector
+-
+
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MatrixChainMult/main.cpp
+cstdio
+-
+iostream
+-
+limits
+-
+MatrixChain.h
+/Users/anthonycortes/Documents/Class/AlgorithmDesign/MatrixChainMult/MatrixChain.h
+vector
+-
+string
+-
+
